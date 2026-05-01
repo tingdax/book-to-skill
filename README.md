@@ -139,7 +139,7 @@ scripts/extract.py          ← tries pdftotext → PyPDF2 → pdfminer
 Copy this into your Claude Code session:
 
 ```
-Install book-to-skill: https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/SKILL.md
+Install book-to-skill: https://raw.githubusercontent.com/virgiliojr94/book-to-skill/master/SKILL.md
 ```
 
 Or manually:
@@ -148,10 +148,10 @@ Or manually:
 mkdir -p ~/.claude/skills/book-to-skill/scripts
 
 curl -o ~/.claude/skills/book-to-skill/SKILL.md \
-  https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/SKILL.md
+  https://raw.githubusercontent.com/virgiliojr94/book-to-skill/master/SKILL.md
 
 curl -o ~/.claude/skills/book-to-skill/scripts/extract.py \
-  https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/scripts/extract.py
+  https://raw.githubusercontent.com/virgiliojr94/book-to-skill/master/scripts/extract.py
 ```
 
 Then in any Claude Code session:

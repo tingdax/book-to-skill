@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Documentation
+- Clarified the two install paths so they are not confused: **`git clone` into a
+  skills folder** registers the `/book-to-skill` agent skill (Claude Code / Copilot
+  CLI / Amp), while **`pip install book-to-skill`** installs only the standalone
+  extraction CLI and does not register the skill. README and the docs landing now
+  show both explicitly.
+
 ### Security
 - **DOCX XXE / Billion Laughs hardening** — the DOCX extractor now scans the
   archive and rejects any XML part that declares a DTD or entities before

@@ -52,10 +52,19 @@ Turn any book or document into a structured, on-demand agent skill — named fra
 
 ## Install
 
+**As an agent skill** (gives you the `/book-to-skill` command in Claude Code, Copilot CLI, Amp):
+
 ```bash
-pip install book-to-skill        # the extractor package
-# or run the skill in your agent:
+git clone https://github.com/virgiliojr94/book-to-skill.git ~/.claude/skills/book-to-skill
+# then, in your agent session:
 /book-to-skill /path/to/book.pdf [skill-name]
+```
+
+**As a standalone CLI** (just the text extractor, optional):
+
+```bash
+pip install "book-to-skill[pdf,epub,docx]"
+book-to-skill /path/to/book.pdf --mode text
 ```
 
 ## Learn more

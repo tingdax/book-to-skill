@@ -333,6 +333,10 @@ book-to-skill is built for a different job: you want to go deep on a specific to
 
 ## 📥 Install
 
+> **Two ways to use it, do not confuse them:**
+> - **As an agent skill** (the `/book-to-skill` command in Claude Code, Copilot CLI, or Amp) → **`git clone` into your skills folder** (below). This is what gives you the slash command and the full convert-a-book flow.
+> - **As a standalone CLI** (just the text extractor) → `pip install book-to-skill`, then `book-to-skill --help`. This does **not** register the agent skill; it only installs the extraction engine. See [the CLI section](#standalone-cli-pip).
+
 The skill follows the open [Agent Skills](https://github.com/agentskills/agentskills) standard, so a single install works for any compatible host.
 
 **GitHub Copilot CLI** (personal skill):
@@ -370,6 +374,19 @@ Then in any agent session:
 /book-to-skill ~/path/to/your-book.pdf
 # or
 /book-to-skill ~/path/to/your-book.epub
+```
+
+### Standalone CLI (pip)
+
+`pip install book-to-skill` is a **separate, optional** path. It installs only the
+text-extraction engine as a CLI, for scripting or to grab the optional extractors;
+it does **not** register the `/book-to-skill` agent skill (use the `git clone` above
+for that).
+
+```bash
+pip install "book-to-skill[pdf,epub,docx]"   # engine + optional extractors
+book-to-skill ~/path/to/book.pdf --mode text  # or: python -m book_to_skill ...
+book-to-skill --check                          # report which extractors are installed
 ```
 
 ---
